@@ -23,3 +23,4 @@ sabemos que:
  Una rama representa una línea independiente de desarrollo. Las ramas sirven como una abstracción de los procesos de cambio, preparación y confirmación.
  Las nuevas confirmaciones se registran en el historial de la rama actual, lo que crea una bifurcación en el historial del proyecto.
 * git remote add origin [url project https || ssh]: conectar repositorio remoto a nuestro repo local.
+* git pull origin [local-branch] --allow-unrelated-histories: usado para forzar la union de las historias de ramas remotas y locales
