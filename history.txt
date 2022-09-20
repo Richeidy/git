@@ -22,4 +22,4 @@ sabemos que:
 * branch:  Cuando creas una rama, todo lo que Git tiene que hacer es crear un nuevo puntero, no modifica el repositorio de ninguna otra forma.
  Una rama representa una línea independiente de desarrollo. Las ramas sirven como una abstracción de los procesos de cambio, preparación y confirmación.
  Las nuevas confirmaciones se registran en el historial de la rama actual, lo que crea una bifurcación en el historial del proyecto.
- 
+* git remote add origin [url project https || ssh]: conectar repositorio remoto a nuestro repo local.
