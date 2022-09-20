@@ -3,31 +3,48 @@ Hola este es el curso de git.
 sabemos que:
 
 * git: sistema de contol de versiones.
+
 * git init: crea un repositorio en el directorio actual y el staged.
 * Al ejecutar git init, se crea un subdirectorio de .git en el directorio de trabajo actual, 
  que contiene todos los metadatos de Git (base de datos de los cambios atómicos realizados en el proyecto)
  También se genera un archivo HEAD que apunta a la confirmación actualmente extraída.
+
 * git config --global user.email "tu@email.com".
 * git config --global user.name "Tu Nombre".
 * git config --list muestra configuración actual de git.
+
 * git add [archivo.extension]: envía  al staged los archivos creados/modificados.
 * git add .: envía al stage todos los archivos creados/modificados en el directorio actual. 
+
 * git status: muestra el estado actual de nuestro directorio.
+
 * git rm --cached [archivo.extension]: para eliminar el archivo del staged(ram).
 * git rm [archivo.extension]: para eliminar del repositorio
+
 * git show: compara los ultimos cambios realizados.
 * git diff 
+
 * commit: (confirmación de cambios) se puede entender como una captura de pantalla del estado del proyecto en un momento concreto.
  Dicha instantánea contiene además unos metadatos con el autor y el mensaje explicativo y apuntadores(padres).
+
 * branch:  Cuando creas una rama, todo lo que Git tiene que hacer es crear un nuevo puntero, no modifica el repositorio de ninguna otra forma.
  Una rama representa una línea independiente de desarrollo. Las ramas sirven como una abstracción de los procesos de cambio, preparación y confirmación.
  Las nuevas confirmaciones se registran en el historial de la rama actual, lo que crea una bifurcación en el historial del proyecto.
+
 * git remote add origin [url project https || ssh]: conectar repositorio remoto a nuestro repo local.
+
 * git pull origin [local-branch] --allow-unrelated-histories: usado para forzar la union de las historias de ramas remotas y locales
+
 * git push origin [branch1 branch2 .... branchN]: envía  al origen las ramas especificadas
 * git push origin --delete [branch]: elimina una rama del repo remoto.
+
 * git log --all --graph --decorate --oneline: detalla visualmente las ramas y commits realizados
 * alias [nombre del comando alias]="[comando]": le colocamos un alias a un comando generalmente extension.
+* git config alias.[alias] "[comando]": añade un alias en la configuración local de git para el proyecto actual.
+ ejemplo-> git config alias.arbolito "log --all --graph --decorate --oneline"
+* git config --global alias.[alias] "[comando]": añade un alias en la configuración global de git.
+
+
 * git tag -a [tag] -m ["comentario"]: agrega tag al ultimo commit realizado
 * git tag -a [tag] -m ["comentario"] [hash del commit]: agrega un tag al commit especificado y un comentario.
 * git show-ref --tags: revisar lista de tags creados y sus referancias.
