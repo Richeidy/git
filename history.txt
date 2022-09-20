@@ -2,4 +2,4 @@ Hola esta es la historia de richi
 
 esta es la primera versión de este texto
 
-prueba en vim 3 sin comentario.
+prueba en vim 3 sin comentario..
