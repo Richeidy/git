@@ -34,6 +34,7 @@ sabemos que:
 * git remote add origin [url project https || ssh]: conectar repositorio remoto a nuestro repo local.
 
 * git pull origin [local-branch] --allow-unrelated-histories: usado para forzar la union de las historias de ramas remotas y locales
+* git branch --set-upstream-to=origin/<branch> branch: realizar rastreo de rama local con rama remota
 
 * git push origin [branch1 branch2 .... branchN]: envía  al origen las ramas especificadas
 * git push origin --delete [branch]: elimina una rama del repo remoto.
