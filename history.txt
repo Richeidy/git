@@ -24,3 +24,8 @@ sabemos que:
  Las nuevas confirmaciones se registran en el historial de la rama actual, lo que crea una bifurcación en el historial del proyecto.
 * git remote add origin [url project https || ssh]: conectar repositorio remoto a nuestro repo local.
 * git pull origin [local-branch] --allow-unrelated-histories: usado para forzar la union de las historias de ramas remotas y locales
+* git push origin [branch1 branch2 .... branchN]: envía  al origen las ramas especificadas
+* git push origin --delete [branch]: elimina una rama del repo remoto.
+* git log --all --graph --decorate --oneline: detalla visualmente las ramas y commits realizados
+* alias [nombre del comando alias]="[comando]": le colocamos un alias a un comando generalmente extension.
+* git tag -a [tag] -m ["comentario"] [hash del commit]: agrega un tag al commit especificado y un comentario.
