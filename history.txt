@@ -15,3 +15,4 @@ También se genera un archivo HEAD que apunta a la confirmación actualmente ext
 * git status: muestra el estado actual de nuestro directorio.
 * git rm --cached [archivo.extension]: para eliminar el archivo del staged(ram).
 * git rm [archivo.extension]: para eliminar del repositorio
+* git show: compara ...
