@@ -28,4 +28,9 @@ sabemos que:
 * git push origin --delete [branch]: elimina una rama del repo remoto.
 * git log --all --graph --decorate --oneline: detalla visualmente las ramas y commits realizados
 * alias [nombre del comando alias]="[comando]": le colocamos un alias a un comando generalmente extension.
+* git tag -a [tag] -m ["comentario"]: agrega tag al ultimo commit realizado
 * git tag -a [tag] -m ["comentario"] [hash del commit]: agrega un tag al commit especificado y un comentario.
+* git show-ref --tags: revisar lista de tags creados y sus referancias.
+* git push origin --tags: envia al repo remoto los tags creados
+* git tag -d [nombre del tag]:  elimina tag local.
+* git push origin :refs/tags/nombre-del-tag: elimina tag del repo remoto.
