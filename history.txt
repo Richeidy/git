@@ -1,5 +1,17 @@
-Hola esta es la historia de richi
+Hola este es el curso de git.
 
-esta es la primera versión de este texto
+sabemos que:
 
-prueba en vim 3 sin comentario..
+* git: sistema de contol de versiones.
+* git init: crea un repositorio en el directorio actual y el staged.
+* Al ejecutar git init, se crea un subdirectorio de .git en el directorio de trabajo actual, 
+que contiene todos los metadatos de Git (base de datos de los cambios atómicos realizados en el proyecto)
+También se genera un archivo HEAD que apunta a la confirmación actualmente extraída.
+* git config --global user.email "tu@email.com".
+* git config --global user.name "Tu Nombre".
+* git config --list muestra configuración actual de git.
+* git add [archivo.extension]: envía  al staged los archivos creados/modificados.
+* git add .: envía al stage todos los archivos creados/modificados en el directorio actual. 
+* git status: muestra el estado actual de nuestro directorio.
+* git rm --cached [archivo.extension]: para eliminar el archivo del staged(ram).
+* git rm [archivo.extension]: para eliminar del repositorio
