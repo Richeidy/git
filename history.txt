@@ -73,3 +73,46 @@ git rebase --continue, si todo está ok, abre VIM para agregar un commentario al
 ** de nuevo en main **
 
 ***rama 2***
+
+
+---------------------- git stash -------------------
+
+El stashed nos sirve para guardar cambios para después, Es una lista de estados que nos guarda 
+algunos cambios que hicimos en Staging para poder cambiar de rama sin perder el trabajo que todavía no guardamos en un commit
+Ésto es especialmente útil porque hay veces que no se permite cambiar de rama, ésto porque tenemos cambios sin guardar, 
+no siempre es un cambio lo suficientemente bueno como para hacer un commit, pero no queremos perder ese código en el que estuvimos trabajando.
+El stashed nos permite cambiar de ramas, hacer cambios, trabajar en otras cosas y, más adelante, 
+retomar el trabajo con los archivos que teníamos en Staging, pero que podemos recuperar, ya que los guardamos en el Stash.
+
+* git stash:  coge los cambios sin confirmar (tanto los que están preparados como los que no), 
+ los guarda aparte para usarlos más adelante y, acto seguido, los deshace en el código en el que estás trabajando.
+* git stash list: muestra los stash relizados, ejemplo stash@{0}: WIP on main: 5002d47 our new homepage, donde:
+    stash@{0}:  numero del stash
+    WIP work in progress
+    on main: qué rama es
+    5002d47 hash de la branch
+    our new homepage ultimo commit
+* git stash pop: trae los cambios realizados (ultimo stash).
+* git stash pop stash@{numero de stash}: trae el stash especifico.
+* git stash branhc [name branch]: crea una rama con el stash realizado
+* git stash drop: elimina un stash específico o el ultimo.
+* git stash clear: elimina todos los stash.
+* git stash apply: aplicar los cambios en el código en el que estás trabajando y conservarlos en tu stash mediante el comando.
+ Esto resulta útil si quieres aplicar los mismos cambios de un stash en varias ramas.
+
+
+OJO  -> Git no guardará en un stash los cambios efectuados en archivos sin seguimiento o ignorados.
+De forma predeterminada, al ejecutar el comando git stash, se guardará en un stash lo siguiente:
+
+los cambios que se hayan añadido a tu índice (cambios preparados)
+los cambios efectuados en archivos de los que Git está haciendo un seguimiento (cambios sin preparar)
+Pero no lo siguiente:
+
+los archivos nuevos del código en el que estás trabajando que todavía no se hayan preparado
+los archivos que se hayan ignorado
+Así pues, si añadimos un tercer archivo al ejemplo anterior, pero no lo preparamos 
+(es decir, si no ejecutamos el comando git add), git stash no lo guardará en el stash.
+
+* git stash -u: (--include-untracked), se indica a git stash que también guarde en el stash los archivos sin seguimiento.
+* git stash -a: (--all), incluir los cambios en los archivos ignorados
+* git stash save "mensaje": Para contextualizar un poquito más, es recomendable comentar los stashes con una descripción mediante el comando.
