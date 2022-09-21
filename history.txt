@@ -59,5 +59,8 @@ La razón principal para cambiar la base es mantener un historial de proyecto li
 usar git rebase en repositorios remotos es un mala practica ya que reescribe el historial de git.
 use git REBASE SOLO DE FORMA LOCAL si desea mantener el historial lineal de una rama especifica.
 SIEMPRE hacer git rebase en la rama secundaria de la rama princial y luego moverse a la principal y hacer rebase de la secundaria para evitar conflictos en la principal.
+para resolver conflictos al hacer git rebase , se deben resolver manualmente, hacer git add y luego 
+git rebase --continue, si todo está ok, abre VIM para agregar un commentario al commit que se generará 
 
-*git rebase [branch name]
+* git rebase [branch name]
+* git rebase --continue
