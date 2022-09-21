@@ -1,0 +1,60 @@
+----------- git rm ---------------
+
+Este comando nos ayuda a eliminar archivos de Git sin eliminar su historial del sistema de versiones. 
+Esto quiere decir que si necesitamos recuperar el archivo solo debemos “viajar en el tiempo” y recuperar 
+el último commit antes de borrar el archivo en cuestión.
+
+* git rm --cached [archivo.extension]: Elimina los archivos de nuestro repositorio local y del área de staging, pero los mantiene en nuestro disco duro. 
+Básicamente le dice a Git que deje de trackear el historial de cambios de estos archivos, por lo que pasaran a un estado untracked.
+* git rm --force [archivo.extension]: Elimina los archivos de Git y del disco duro. Git siempre guarda todo, por lo que podemos acceder 
+al registro de la existencia de los archivos, de modo que podremos recuperarlos si es necesario (pero debemos usar comandos más avanzados).
+
+
+-------------- git reset -----------------
+
+te permite RESTABLECER tu estado actual a un estado específico.
+Con git reset volvemos al pasado sin la posibilidad de volver al futuro. 
+Borramos la historia y la debemos sobreescribir. No hay vuelta atrás.
+Puedes restablecer el estado de archivos específicos, así como el de todo una rama. 
+ESTO ES UTIL SI AÚN NO HAS SUBIDO TU COMMIT AL REPOSITORIO REMOTO
+
+* git reset mode(--soft, --mixed, --hard, --merge, --keep, POR DEFECTO --MIXED) hash-commit
+
+Los modos son:
+
+--soft: Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging
+--mixed: restablece el índice, pero no el árbol de trabajo e informa de lo que no se ha actualizado.
+--hard: restablece el índice y el árbol de trabajo. Cualquier cambio en los archivos rastreados en el árbol de trabajo desde el commit son descartados.
+Toda la información de los commits y del área de staging se borra del historial.
+--merge: restablece el índice y actualiza los archivos en el árbol de trabajo que son diferentes entre el commit y HEAD, pero mantiene los que son 
+diferentes entre el índice y el árbol de trabajo.
+--keep: restablece las entradas del índice, actualiza los archivos en el árbol de trabajo que son diferentes entre commit y HEAD. 
+Sin un archivo que es diferente entre commit y HEAD tiene cambios locales, el reinicio se aborta.
+
+* git reset HEAD: Este es el comando para sacar archivos del área de staging. 
+No para borrarlos ni nada de eso, solo para que los últimos cambios de estos archivos no se envíen al último commit,
+a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
+
+
+------------ git reset vs git rm --------------
+
+tenemos un archivo que agregamos al stage (add .) 
+si hacemos git rm eliminamos el archivo de git, pero tendremos el historial de cambios de ese archivo y su eliminación como ultima actualizacion.
+si hacemos git reset HEAD movemos los archivos (cambios) de staging a unstaged
+
+
+------------ git revert --------------
+
+es una manera de revertir o deshacer una confirmacion (commit), sin eliminarlo del historial y realizando un nuevo commit con el contenido inverso resultante.
+Esto evita que Git pierda el historial, lo cual es importante para la integridad de su historial de revisión y para una colaboración confiable.
+ES UTIL CUANDO YA SE ENVIO EL COMMIT A UN REPOSITORIO REMOTO.
+
+Otros comandos de 'deshacer' como, git checkout y git reset, mueven los HEAD punteros de referencia de bifurcación a una confirmación específica. 
+Git revert también toma una confirmación específica, sin embargo, git revert no mueve los punteros de referencia a esta confirmación.
+
+Una operación de reversión tomará la confirmación especificada, invertirá los cambios de esa confirmación y creará una nueva "reversión de confirmación". 
+Luego, los punteros de referencia se actualizan para apuntar a la nueva confirmación de reversión, lo que la convierte en la punta de la rama.
+
+* git revert HEAD: revierte la última confirmacion
+
+Es importante comprender que git revertdeshace una sola confirmación, no "vuelve" al estado anterior de un proyecto eliminando todas las confirmaciones posteriores

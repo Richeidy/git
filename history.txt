@@ -18,9 +18,6 @@ sabemos que:
 
 * git status: muestra el estado actual de nuestro directorio.
 
-* git rm --cached [archivo.extension]: para eliminar el archivo del staged(ram).
-* git rm [archivo.extension]: para eliminar del repositorio
-
 * git show: compara los ultimos cambios realizados.
 * git diff 
 
@@ -74,3 +71,6 @@ git rebase --continue, si todo está ok, abre VIM para agregar un commentario al
 *********** tarea dos lista ********
 
 ** de nuevo en main **
+
+***rama 2***
+
