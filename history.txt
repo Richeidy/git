@@ -124,7 +124,7 @@ permite que las confirmaciones arbitrarias de Git se elijan por referencia y se 
 (elegir una confirmación de una rama y aplicarla a otra).
 NO ES UNA BUENA PRÁCTICA, es util para casos específicos ya que modifica el historial de git y puede genera confirmaciones duplicadas
 
-* git cherry-pick commitSha taer y aplicar un commit antiguo a mi rama actual.
+* git cherry-pick commitSha: taer y aplicar un commit antiguo a mi rama actual.
 * git cherry-pick -edit: Git solicitará un mensaje de confirmación antes de aplicar la operación cherry-pick.
 * git cherry-pick --no-commit:  ejecutará el comando cherry-pick, pero en lugar de hacer una nueva confirmación,
  moverá el contenido de la confirmación de destino al directorio de trabajo de la rama actual.
