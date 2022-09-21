@@ -52,3 +52,5 @@ sabemos que:
 * git show-ref --tags: revisar lista de tags creados y sus referancias.
 * git push origin --tags: envia al repo remoto los tags creados
 * git tag -d [nombre del tag]:  elimina tag local.
+
+----- git rebase -----
