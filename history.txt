@@ -70,4 +70,4 @@ git rebase --continue, si todo está ok, abre VIM para agregar un commentario al
 ********** lista tarea 1 ******
 
 ***tarea 2 ***
-** sub titulo **
+** sub titulo ** 
