@@ -53,4 +53,14 @@ sabemos que:
 * git push origin --tags: envia al repo remoto los tags creados
 * git tag -d [nombre del tag]:  elimina tag local.
 
+<<<<<<< HEAD
 ----- git rebase -----
+=======
+git rebase es el proceso de mover o combinar una secuencia de confirmaciones a una nueva confirmación base.
+La razón principal para cambiar la base es mantener un historial de proyecto lineal. 
+usar git rebase en repositorios remotos es un mala practica ya que reescribe el historial de git.
+use git REBASE SOLO DE FORMA LOCAL si desea mantener el historial lineal de una rama especifica.
+SIEMPRE hacer git rebase en la rama secundaria de la rama princial y luego moverse a la principal y hacer rebase de la secundaria para evitar conflictos en la principal.
+
+*git rebase [branch name]
+>>>>>>> d26534d (rebase1)
