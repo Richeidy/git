@@ -64,3 +64,5 @@ git rebase --continue, si todo está ok, abre VIM para agregar un commentario al
 
 * git rebase [branch name]
 * git rebase --continue
+
+*** TAREA  ***
