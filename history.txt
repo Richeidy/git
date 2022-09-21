@@ -116,3 +116,16 @@ Así pues, si añadimos un tercer archivo al ejemplo anterior, pero no lo prepar
 * git stash -u: (--include-untracked), se indica a git stash que también guarde en el stash los archivos sin seguimiento.
 * git stash -a: (--all), incluir los cambios en los archivos ignorados
 * git stash save "mensaje": Para contextualizar un poquito más, es recomendable comentar los stashes con una descripción mediante el comando.
+
+
+------------ cherry-pick -------------
+
+permite que las confirmaciones arbitrarias de Git se elijan por referencia y se añadan al actual HEAD de trabajo.
+(elegir una confirmación de una rama y aplicarla a otra).
+NO ES UNA BUENA PRÁCTICA, es util para casos específicos ya que modifica el historial de git y puede genera confirmaciones duplicadas
+
+* git cherry-pick commitSha taer y aplicar un commit antiguo a mi rama actual.
+* git cherry-pick -edit: Git solicitará un mensaje de confirmación antes de aplicar la operación cherry-pick.
+* git cherry-pick --no-commit:  ejecutará el comando cherry-pick, pero en lugar de hacer una nueva confirmación,
+ moverá el contenido de la confirmación de destino al directorio de trabajo de la rama actual.
+* git cherry-pick --signoff: añadirá una línea de firma 'signoff' al final del mensaje de confirmación de cherry-pick.
