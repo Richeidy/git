@@ -1,0 +1,28 @@
+usado para colaborar en un proyecto open source.
+
+fork significa bifurcar, esta funcionalidad nos la brinda github,
+y lo que hace es crear una copia del repositorio al que se desea colaborar
+a tu repositorio, con todo el historial del mismo, con esta copia
+puedes clonar el proyecto y realizar cambios para luego solicitar
+un pull request al dueño del proyecto original.
+
+* para clonar el proyecto bifurcado: git clone url-del-proyecto-copiado
+
+
+realizamos el PR desde github al proyecto original, y esperamos respuesta.
+
+para traernos cambios que se hayan relizado en el proyecto original a nuestra copia
+tenemos dos formas, a traves de github o:
+
+* git remote add [nombre del remoto, usualmente se usa upstream] url-del-proyecto-original
+
+con este comando creamos un apuntador al proyecto original y coneso
+poder trakear los cambios
+
+para traer los cambios hacemos:
+
+*git pull [nombre del remoto, usualmente se usa upstream] [rama que se desea actualizar]
+
+luego hacemos push a nuestra copia del repo(nuestro fork)
+
+* git push [nombre nuestro remoto, usualmente se usa origin] [rama a la que se desea hacer push]
